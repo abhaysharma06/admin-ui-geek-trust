@@ -1,0 +1,194 @@
+.adminMainList {
+  padding: 3rem 10rem;
+  &__topHeading {
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      span {
+        width: 2rem;
+        height: 2rem;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      @include sectionHeading;
+    }
+  }
+
+  &__searchSection {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    &--searchBar {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 40%;
+      input {
+        background-color: transparent;
+        border: 1px solid hsla(212, 9%, 43%, 0.9);
+        border-radius: 0.4rem;
+        padding: 0.9rem 1rem;
+        width: 100%;
+        outline: none;
+        @include paragraph;
+      }
+    }
+    &--filter {
+      border: 1px solid hsla(212, 9%, 43%, 0.9);
+      border-radius: 0.4rem;
+      padding: 0.8rem 1rem;
+      cursor: pointer;
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        span {
+          display: inline-block;
+          width: 1.8rem;
+          height: 1.8rem;
+          img {
+            filter: invert(85%) sepia(28%) saturate(6%) hue-rotate(316deg)
+              brightness(102%) contrast(91%);
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      @include paragraph;
+    }
+    &--btnWrapper {
+      .reset {
+        // padding: 1.5rem 2rem;
+      }
+    }
+  }
+
+  &__tableSection {
+    margin-top: 5rem;
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &--col {
+        width: 20%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:last-child {
+          justify-content: flex-end;
+        }
+       
+        @include subSectionHeading;
+        h3 {
+          color: $light-green;
+        }
+      }
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 3rem;
+      &--row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 0;
+        &--col {
+          width: 20%;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          &:nth-child(1) {
+            justify-content: flex-start;
+            cursor: pointer;
+          } 
+
+          &:nth-child(2),&:nth-child(3),&:nth-child(4){
+            input {
+              background-color: transparent;
+              border: 1px solid hsla(212, 9%, 43%, 0.9);
+              border-radius: 0.4rem;
+              padding: 0.9rem 1rem;
+              width: auto;
+              outline: none;
+              @include paragraph;
+            }
+          }
+        
+          input[type="checkbox"] {
+            position: relative;
+            cursor: pointer;
+            appearance: none;
+          }
+          input[type="checkbox"]:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            top: 0;
+            left: 0;
+            border: 0.2rem solid #555555;
+            border-radius: 0.4rem;
+            background-color: transparent;
+          }
+
+          input[type="checkbox"]:checked:after {
+            content: "";
+            display: block;
+            width: 0.9rem;
+            height: 1.5rem;
+            border: solid $red;
+            border-width: 0 0.2rem 0.2rem 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            top: 0.1rem;
+            left: 0.5rem;
+          }
+
+          &:last-child {
+            justify-content: flex-end;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1.5rem;
+            span{
+              display: inline-block;
+              width: 2rem;
+              height: 2rem;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          p {
+            @include paragraph;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  &__pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 4rem;
+    div{
+      width: 33%;
+    }
+  
+  }
+}

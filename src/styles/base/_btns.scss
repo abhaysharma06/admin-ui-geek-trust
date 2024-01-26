@@ -1,0 +1,38 @@
+.btn{
+
+    display: flex;
+    align-items: center;   
+    color: $light-white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0.9rem 1rem;
+    cursor: pointer;
+    border-radius: 0.4rem; 
+    border: none;
+
+    &__primary{
+        background-color: transparent;
+        border: 0.1rem solid hsla(212, 9%, 43%, 0.9);
+    }
+
+    &__secondary{
+       color: $blue;
+       border: 0.1rem solid hsla(212, 9%, 43%, 0.9);
+    }
+
+    &__negative{
+       background-color: $red;
+       color: $dark-white;
+    }
+
+    &__postive{
+      background: $dark-green;
+    }
+
+    &__disable{
+       pointer-events: none;
+       opacity: 0.5;
+    }
+}
