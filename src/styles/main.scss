@@ -6,6 +6,9 @@
 @import './base/variable';
 
 //! Pages
- 
+@import "./pages/adminMainList"; 
 
 //! Components
+@import './components/leftSideBar';
+@import "./components/navbar";
+@import './components/pagination';
